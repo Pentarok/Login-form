@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(60, 255, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Teachers", sans-serif;
+    }
+    .formcontainer{
+      background: linear-gradient(90deg,black,blue);
+       position: relative;
+       top:50px;
+       padding-top: 20px; 
+        
+        width: 310px;
+        margin-bottom: 20px;
+        height: 350px;
+        border: 1px solid black;
+        border-radius: 5px;
+       overflow: hidden;
+
+    }
+    input::placeholder{
+        font-size: 18px;
+        font-family: "Teachers", sans-serif;
+        font-weight: 500;
+        color: black;
+    }
+    input:focus{
+        outline: none;
+    }      
+
+input{
+    font-size: 18px;
+    font-family:  sans-serif;
+    font-weight: 500;
+    width: 300px;
+    height: 35px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: 5px;
+}
+    
+    
+    .submit{
+        color: rgb(24, 22, 22);
+        background-color: rgb(210, 231, 16);
+        font-size: 20px;
+        border-radius: 45%;
+       margin-left: 82px;
+        width: 180px;
+        margin-top: 10px;
+    }
+    #submit{
+       
+    }
+
+    .formbtn span {
+        cursor: pointer;
+        font-size: 18px;
+        color: white;
+        font-family: "Teachers", sans-serif;
+        margin-left: 70px;
+       
+    }
+    #indicator{
+        position: absolute;
+        left: 170px;
+        height: 4px;
+        width: 100px;
+        background-color: greenyellow;
+        border: none;
+        border-radius: 2px;
+        transition: transform 0.9s ease;
+    } 
+    #Login{
+        position: absolute;
+        right: 310px;
+        top:45px;
+        transition: transform 0.9s ease;
+        margin-right: 5px;
+    }
+    #Login input {
+     margin-bottom: 30px;
+    }
+    
+    #Register{
+        transition: transform 0.9s ease;
+    }
+    #name1,#email,#password1{
+position: relative;
+    }
+   
+    #name2,#password2{
+      position: relative;
+    }
+    .icon1{
+        position: relative;
+        left: 280px;
+        top: -52px;
+    }
+    .icon2{
+        position: relative;
+        left: 280px;
+        top: -52px;
+    }
+    .icon3{
+        position: relative;
+        left: 280px;
+        top: -52px;
+    }
+    .fa-circle-xmark{
+        font-size: 22px;
+        color: red;
+    }
+    .fa-circle-check{
+        color: green;
+        font-size: 22px;
+    }
+    .icon11{
+        position: absolute;
+        right: 4px;
+        top: 22px;
+    }
+    .icon12{
+        position: absolute;
+        right: 4px;
+        top: 102px;
+    }
+    #Login p{
+        margin-top: -28px;
+    }
+    p{
+        position: absolute;
+        color: white;
+        margin-top: -49px;
+        padding-left: 10px;
+    }
+   
+   </style>
+</head>
+<body>
+    <div class="formcontainer">
+        <div class="formbtn">
+            <span onclick="login()">Login</span>
+            <span onclick="register()">Register</span>
+            <hr id="indicator">
+        </div>
+            <form id="Register">
+                <input type="name" placeholder="Username" id="name1"><div class="icon1"></div> 
+                <p id="name1error"></p>
+                <input type="email" placeholder="Email" id="email"><div class="icon2"></div>
+                <p id="emailerror"></p>
+                <input type="password" placeholder="Password" id="password1"><div class="icon3"></div> 
+                <p id="password1error"></p>
+                <button type="submit" id="submit" class="submit">Submit</button>
+            </form>
+            <form id="Login">
+                <input type="name" placeholder="Username" id="name2"> <div class="icon11"></div>
+                <p id="name2error"></p>
+                <input type="password" placeholder="Password" id="password2"><div class="icon12"></div>
+                <p id="password2error"></p>
+                <button type="submit" id="submit2" class="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+    
