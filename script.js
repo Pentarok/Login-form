@@ -228,8 +228,4 @@ function register(){
     Indicator.style.transform = "translateX(0px)";
 }
 
-function fill(){
-    let name2 = document.getElementById('name2');
-    let Iden = document.getElementById('iden');
-    Iden.innerHTML = name2.value;
-}
+
